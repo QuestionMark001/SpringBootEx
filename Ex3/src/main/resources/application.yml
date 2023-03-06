@@ -1,0 +1,30 @@
+# 数据库配置
+spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+  datasource:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/example
+    username: Your Username
+    password: Your Password
+
+# 如果有 Mybatis 配置文件，请取消以下注释
+#resource: mapper.xml
+#mybatis:
+#  mapper-locations: classpath:mapper.xml
+
+# 服务器端口配置
+server:
+  port: 8080
+
+# 变量引用举例
+baseDir: C:\Windows
+# 使用 ${属性名} 引用数据
+tempDir: ${baseDir}\temp
+# 使用引号 "" 包裹的字符串，其中的转义字符可以生效
+tempDir2: "${baseDir}\temp \t1 \t2 \t3"
