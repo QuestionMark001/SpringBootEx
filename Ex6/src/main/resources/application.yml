@@ -13,7 +13,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       # 部分版本的 MySQL 驱动，可能会有时区报错：
       # The server time zone value '...' is unrecognized ...
-      # 如果有此报错，可尝试自定义 url （或 MySQL 驱动）的时区即可解决，例如：
+      # 如果有此报错，可尝试自定义 url （或 MySQL 驱动的配置文件）的时区即可解决，例如：
       # url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
       url: jdbc:mysql://localhost:3306/ssm_db
       username: Your Username
