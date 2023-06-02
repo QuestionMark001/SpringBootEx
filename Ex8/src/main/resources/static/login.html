@@ -1,0 +1,35 @@
+<!--
+ * @Author: QuestionMark001
+ * @Date: 2023-06-01 22:10:52
+ * @LastEditors: QuestionMark001
+ * @LastEditTime: 2023-06-02 09:15:43
+ * @FilePath: /static/login.html
+ * @Description: QM图书管理系统 登录页
+ * 
+ * Copyright (c) 2023 by QuestionMark001, All Rights Reserved. 
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://localhost:8080/favicon" type="image/x-icon">
+    <link rel="stylesheet" href="/loginAssets/login.css" />
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/user-login" method="post" class="login-form">
+            <h2>登 录</h2>
+            <input type="text" name="username" placeholder="用户名" />
+            <input type="password" name="password" placeholder="密码" />
+            <button type="submit">登录</button>
+        </form>
+    </div>
+</body>
+
+</html>

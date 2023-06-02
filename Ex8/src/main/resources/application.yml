@@ -1,0 +1,35 @@
+# 数据库配置
+spring:
+  devtools:
+    restart:
+      enabled: true  # 设置开启热部署
+      additional-paths: src/main/java  # 重启目录
+      exclude: WEB-INF/**, static/**  # 热部署排除的目录
+  freemarker:
+    cache: false  # 页面不加载缓存，修改即时生效
+  datasource:
+    # 使用 alibaba-Druid 连接池
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 部分版本的 MySQL 驱动，可能会有时区报错：
+      # The server time zone value '...' is unrecognized ...
+      # 如果有此报错，可尝试自定义 url （或 MySQL 驱动的配置文件）的时区即可解决，例如：
+      # url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/ssm_db
+      username: Your MySQL Username  # 这里改成你自己的 MySQL 账户！
+      password: Your MySQL Password  # 这里改成你自己的 MySQL 密码！
+
+# 服务器端口配置
+server:
+  port: 8080
+
+# 配置 Mybatis-Plus
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto  # 配置数据库 id 自增策略
+
+  # 配置 Mybatis-Plus 日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 标准输出

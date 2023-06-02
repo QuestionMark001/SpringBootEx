@@ -1,0 +1,14 @@
+h2, h3 {
+    text-align: center;
+}
+
+.btn-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.el-button {
+    font-size: medium;
+    font-weight: bolder;
+}
