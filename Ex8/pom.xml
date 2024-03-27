@@ -116,7 +116,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.qm001.ex8.Ex8Application</mainClass>
-                    <skip>true</skip>
+                    <!-- <skip>true</skip> --> <!-- 导致jar包打包不完整的罪魁祸首！ -->
                 </configuration>
                 <executions>
                     <execution>
